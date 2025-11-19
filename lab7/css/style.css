@@ -1,0 +1,242 @@
+body{
+    box-sizing: content-box;
+    background-color: #B3C8E7;
+    border: 3px solid #3B428B;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header header"
+        "nav primary"
+        "footer footer";
+}
+
+header{
+    grid-area: header;
+    text-align: right;
+    font-size: 30px;
+    background-color: #859CC6;
+
+    background-image: url(../images/lighthouselogo.jpg);
+    background-repeat: no-repeat;
+    background-size:contain;
+    padding: 1%;
+}
+
+h1{
+    color: #373A3D;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+nav{
+    grid-area: nav;
+}
+
+nav ul{
+    margin-top: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li{
+    background-color: #E1B6CA;
+    border: 2px solid white;
+    color: white;
+    padding: 15px 30px;
+}
+
+main{
+    background-color: white;
+    align-items: right;
+    padding: 2% 2%;
+}
+
+#primary{
+    display: grid;
+    grid-area: primary;
+    grid-template-columns: 66% 33%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "paragraphs lighthouse";
+}
+
+#paragraphs{
+    grid-area: paragraphs;
+    justify-content: left;
+    align-items: left;
+}
+
+#lighthouse{
+    grid-area: lighthouse;
+    justify-content: right;
+    align-items: right;
+    float: right;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+#paragraphs h2{
+    color: #859CC6;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    background-color: #859CC6;
+    padding: 0.1%;
+}
+
+footer p{
+    color: #3B428B;
+}
+
+/*  */
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+#container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "primary"
+        "footer";
+}
+
+#index{
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "A B C D";
+}
+
+nav ul{
+    justify-content: center;
+    align-items: center;
+    margin: 5px 20px;
+}
+
+nav li{
+    box-sizing: content-box;
+    margin: 0 5%;
+    border: 0;
+}
+
+.one{
+    grid-area: A;
+}
+.two{
+    grid-area: B;
+}
+.three{
+    grid-area: C;
+}
+.four{
+    grid-area: D;
+}
+
+#primary{
+    display: grid;
+    grid-area: primary;
+    grid-template-columns: 66% 33%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "paragraphs lighthouse";
+}
+
+#paragraphs{
+    grid-area: paragraphs;
+    justify-content: left;
+    align-items: left;
+}
+
+#lighthouse{
+    grid-area: lighthouse;
+    justify-content: right;
+    align-items: right;
+    float: right;
+}
+
+footer{
+    grid-area: footer;
+}
+
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+
+    #container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "primary"
+        "footer";
+    }
+
+    header{ 
+        grid-area: header;
+        background-position: right;
+        text-align: left;
+    }
+
+    h1{
+        color:  #3B428B;
+    }
+
+    nav{
+        grid-area: nav;
+    }
+
+    nav ul{
+        margin-top: 0;
+        justify-content: left;
+        align-items: left;
+    }
+
+    nav li{
+        background-color: #B3C8E7;
+        padding: auto;
+    }
+
+    #primary{
+    display: grid;
+    grid-area: primary;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "paragraphs" 
+        "lighthouse";
+    }
+
+#paragraphs{
+    grid-area: paragraphs;
+    justify-content: left;
+    align-items: left;
+}
+
+#lighthouse{
+    grid-area: lighthouse;
+    justify-content: center;
+    align-items: center;
+    float: center;
+}
+
+footer{
+    grid-area: footer;
+}
+
+} 
